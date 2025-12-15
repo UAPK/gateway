@@ -113,9 +113,9 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
-  - Quickstart: quickstart.md
-  - Concepts:
+  - 🏠 Home: index.md
+  - 🚀 Quickstart: quickstart.md
+  - 💡 Concepts:
       - concepts/index.md
       - UAPK Manifest: concepts/manifest.md
       - Capability Tokens: concepts/capabilities.md
@@ -123,7 +123,7 @@ nav:
       - Approval Workflow: concepts/approvals.md
       - Audit Logs: concepts/logs.md
       - Future-Proof Architecture: concepts/future-proof.md
-  - API Reference:
+  - 📖 API Reference:
       - api/index.md
       - Authentication: api/authentication.md
       - Organizations & Users: api/organizations.md
@@ -131,33 +131,33 @@ nav:
       - Gateway Actions: api/gateway.md
       - Approvals: api/approvals.md
       - Audit Logs: api/logs.md
-  - Operator Guide:
+  - 👨‍💼 Operator Guide:
       - operator/index.md
       - Dashboard Overview: operator/dashboard.md
       - Managing Approvals: operator/approvals.md
       - Audit & Compliance: operator/audit.md
       - Incident Response: operator/incidents.md
-  - Security:
+  - 🔒 Security:
       - security/index.md
       - Security Policy: security/policy.md
       - Threat Model: security/threat-model.md
       - Data Handling: security/data-handling.md
       - Key Management: security/key-management.md
-  - Deployment:
+  - 🚢 Deployment:
       - deployment/index.md
       - Single VM Setup: deployment/single-vm.md
       - Caddy Configuration: deployment/caddy.md
       - Backups & Recovery: deployment/backups.md
       - Monitoring: deployment/monitoring.md
-  - Enterprise:
+  - 💼 Enterprise:
       - Overview: business/index.md
       - Pitch: business/pitch.md
       - Pilot Program: business/pilot.md
       - Pricing: business/pricing.md
       - Support: business/support.md
-  - 47ers Library: 47ers.md
-  - Roadmap: roadmap.md
-  - Demo Walkthrough: demo.md
+  - 🎯 47ers Library: 47ers.md
+  - 🗺️ Roadmap: roadmap.md
+  - 🎬 Demo Walkthrough: demo.md
 
 extra:
   status:
