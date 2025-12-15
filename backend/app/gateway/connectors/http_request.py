@@ -1,5 +1,7 @@
 """HTTP Request connector - generic HTTP requests with domain allowlist."""
 
+import ipaddress
+import socket
 import time
 from typing import Any
 from urllib.parse import urlparse
@@ -22,8 +24,21 @@ class HttpRequestConnector(ToolConnector):
 
     Security:
         - Only requests to allowlisted domains are permitted
+        - SSRF protection: blocks private IP ranges
         - URL is validated before request
     """
+
+    # Private IP ranges to block (SSRF protection)
+    BLOCKED_IP_RANGES = [
+        ipaddress.ip_network("10.0.0.0/8"),
+        ipaddress.ip_network("172.16.0.0/12"),
+        ipaddress.ip_network("192.168.0.0/16"),
+        ipaddress.ip_network("127.0.0.0/8"),
+        ipaddress.ip_network("169.254.0.0/16"),
+        ipaddress.ip_network("::1/128"),  # IPv6 localhost
+        ipaddress.ip_network("fc00::/7"),  # IPv6 ULA
+        ipaddress.ip_network("fe80::/10"),  # IPv6 link-local
+    ]
 
     def __init__(self, config: ConnectorConfig, secrets: dict[str, str] | None = None) -> None:
         super().__init__(config, secrets)
@@ -38,7 +53,7 @@ class HttpRequestConnector(ToolConnector):
         return self.settings.gateway_allowed_webhook_domains
 
     def _validate_url(self, url: str) -> tuple[bool, str | None]:
-        """Validate URL is in allowed domains.
+        """Validate URL is in allowed domains and not targeting private IPs.
 
         Returns (is_valid, error_message).
         """
@@ -50,19 +65,46 @@ class HttpRequestConnector(ToolConnector):
 
         try:
             parsed = urlparse(url)
-            domain = parsed.netloc.lower()
 
-            # Remove port if present for comparison
-            if ":" in domain:
-                domain = domain.split(":")[0]
+            # Check scheme
+            if parsed.scheme not in ("http", "https"):
+                return False, f"Invalid URL scheme: {parsed.scheme}"
 
+            # Check hostname is present
+            if not parsed.hostname:
+                return False, "Missing hostname in URL"
+
+            domain = parsed.hostname.lower()
+
+            # Check against allowed domains
+            domain_allowed = False
             for allowed in allowed_domains:
                 allowed = allowed.lower()
                 # Exact match or subdomain match
                 if domain == allowed or domain.endswith(f".{allowed}"):
-                    return True, None
+                    domain_allowed = True
+                    break
 
-            return False, f"Domain '{domain}' not in allowlist"
+            if not domain_allowed:
+                return False, f"Domain '{domain}' not in allowlist"
+
+            # SSRF protection - check for private IP ranges
+            try:
+                # Get all IP addresses for the hostname
+                addr_info = socket.getaddrinfo(parsed.hostname, None)
+                for info in addr_info:
+                    ip_str = info[4][0]
+                    ip_addr = ipaddress.ip_address(ip_str)
+
+                    # Check if IP is in any blocked range
+                    for blocked_range in self.BLOCKED_IP_RANGES:
+                        if ip_addr in blocked_range:
+                            return False, f"Access to private/internal IP {ip_str} blocked (SSRF protection)"
+
+            except socket.gaierror:
+                return False, f"Could not resolve hostname: {parsed.hostname}"
+
+            return True, None
 
         except Exception as e:
             return False, f"Invalid URL: {e}"
