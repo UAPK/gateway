@@ -64,7 +64,7 @@ theme:
 
 plugins:
   - search
-  - social
+  # - social  # Disabled temporarily - requires additional dependencies
 
 markdown_extensions:
   - abbr
