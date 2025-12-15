@@ -11,7 +11,7 @@
 .md-content .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-accent-fg-color) 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #4f46e5 100%);
   color: white;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -231,4 +231,19 @@
 
 .terminal pre code {
   color: #cdd6f4 !important;
+}
+
+/* Pilot CTA button */
+.md-button--pilot {
+  background-color: #7c3aed !important;
+  color: white !important;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.md-button--pilot:hover {
+  background-color: #6d28d9 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }

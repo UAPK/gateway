@@ -25,6 +25,19 @@ You're deploying an AI customer support agent that can:
 
 Some operations require human approval for safety.
 
+!!! tip "Use Pre-Built 47er Templates"
+    Instead of creating a custom manifest, you can load production-ready templates from our [47ers Library](47ers.md):
+
+    ```bash
+    # Load the "Outbound Email Guard" 47er
+    python scripts/load_example_manifests.py --template=general/outbound_email_guard
+
+    # Or load a legal settlement negotiation gate
+    python scripts/load_example_manifests.py --template=legal/ip_enforcement_settlement_gate
+    ```
+
+    See `examples/47ers/` for all available templates.
+
 ## Step 1: Create Organization
 
 ```bash
@@ -359,6 +372,7 @@ In this demo, you:
 
 ## Next Steps
 
+- [47ers Library](47ers.md) - Pre-built templates for legal, finance, and compliance workflows
 - [Quickstart](quickstart.md) - Full setup guide
 - [API Reference](api/index.md) - Complete API docs
 - [Operator Guide](operator/index.md) - Managing approvals

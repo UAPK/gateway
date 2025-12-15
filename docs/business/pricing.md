@@ -1,173 +1,222 @@
 ---
-title: Pricing
-description: Transparent, usage-based pricing
+title: Pricing & Engagement
+description: Open-source foundation with commercial pilots and enterprise support
 ---
 
-# Pricing
+# Pricing & Engagement
 
-Simple, transparent pricing that scales with your usage.
+UAPK Gateway offers flexible engagement options: self-host the open-source version for free, or get expert help through commercial pilots and enterprise support.
+
+---
+
+## Open Source (Free)
+
+UAPK Gateway is **Apache-2.0 licensed** and fully self-hostable.
+
+**What you get:**
+- Full source code on [GitHub](https://github.com/Amakua/uapk-core)
+- All core features (policy enforcement, approvals, audit logs, capability tokens)
+- Docker Compose deployment for one-VM setup
+- Community support via [GitHub Discussions](https://github.com/Amakua/uapk-core/discussions)
+- Complete documentation and examples
+- 47ers template library
+
+**Best for:** Teams who want to self-manage, contribute back to the project, or evaluate before engaging commercially.
+
+**License:** [Apache License 2.0](https://github.com/Amakua/uapk-core/blob/main/LICENSE)
+
+[Get Started →](../quickstart.md){ .md-button .md-button--primary }
+[View on GitHub →](https://github.com/Amakua/uapk-core){ .md-button }
+
+---
+
+## Commercial Offerings
 
 <div class="pricing-grid" markdown>
 
-<div class="pricing-card" markdown>
-
-### Free
-
-**$0**/month
-
-Perfect for evaluation and small projects
-
-- 3 agents
-- 10,000 actions/month
-- 30-day audit retention
-- Basic approval workflows
-- Community support
-- Email notifications
-
-[Get Started](../quickstart.md){ .md-button }
-
-</div>
-
 <div class="pricing-card featured" markdown>
 
-### Pro
+### 1. Agent Governance Pilot
 
-**$99**/month
+**$15,000 - $25,000** (fixed fee)
 
-For growing teams with production workloads
+**Duration:** 2-4 weeks from kickoff to production
 
-- 25 agents
-- 100,000 actions/month
-- 1-year audit retention
-- Advanced approval workflows
-- Email support (24h response)
-- Slack integration
-- Custom policies
-- API access
+Implement UAPK Gateway for **one high-value workflow** and deliver a production-ready deployment.
 
-[Start Free Trial](#){ .md-button .md-button--primary }
+**Includes:**
+- Production-ready manifest + guardrails
+- Self-hosted gateway on your infrastructure
+- Integrated agent(s) via API or SDK
+- Approval workflows (web UI + API)
+- Evidence-grade audit logs with verified chain
+- Compliance export bundle (sample)
+- Operator training (2-hour session)
+- 30 days post-pilot bug fixes
+
+**Deliverables:**
+- Running UAPK Gateway instance
+- Active UAPK Manifest (validated and activated)
+- Operator runbook and documentation
+- Production deployment checklist
+
+**Best for:** Teams who want fast results with expert guidance. Go from "compliance won't sign off" to "deployed in production" in 2-4 weeks.
+
+[Learn More →](pilot.md){ .md-button .md-button--pilot }
+[Contact Us →](mailto:mail@uapk.info){ .md-button }
 
 </div>
 
 <div class="pricing-card" markdown>
 
-### Enterprise
+### 2. UAPK Blueprint Package
 
-**Custom**
+**$5,000 - $10,000** (design-first)
 
-For organizations with advanced requirements
+**Duration:** 1-2 weeks
 
-- Unlimited agents
-- Unlimited actions
-- Custom retention
-- Custom workflows
-- Dedicated support
-- 99.99% SLA
-- SSO/SAML
-- On-premise option
-- Audit exports
-- Custom integrations
+For teams who want the governance design before building.
 
-[Contact Sales](mailto:sales@uapk.dev){ .md-button }
+**Deliverables:**
+- Agent roles, actions, and tools mapped
+- Policy manifest + escalation thresholds
+- Budget and risk hook design
+- Integration architecture document
+- Template UAPK Manifests
+- Implementation roadmap
+
+**Best for:** Teams who need to get stakeholder buy-in, plan architecture, or understand requirements before implementation.
+
+**Next step:** Use the blueprint to self-implement, or transition to a full pilot.
+
+[Contact Us →](mailto:mail@uapk.info){ .md-button }
+
+</div>
+
+<div class="pricing-card" markdown>
+
+### 3. Enterprise Support
+
+**Custom pricing** (recurring)
+
+**Duration:** Ongoing (monthly or annual contracts)
+
+For production deployments requiring dedicated support and custom development.
+
+**Includes:**
+- Custom connectors (Salesforce, M365, Slack, internal APIs)
+- Compliance export tuning (SOC2, GDPR, industry-specific)
+- SLA (4-hour response, 99.9% uptime commitment)
+- Version upgrades and security patches
+- Dedicated support channel
+- Priority bug fixes and feature requests
+
+**Best for:** Production deployments at scale, regulated environments, or teams needing ongoing vendor support.
+
+**Typical engagement:** $3K-$10K/month depending on scale and custom requirements.
+
+[Contact Us →](mailto:mail@uapk.info){ .md-button }
 
 </div>
 
 </div>
 
-## Plan Comparison
+---
 
-| Feature | Free | Pro | Enterprise |
-|---------|:----:|:---:|:----------:|
-| **Agents** | 3 | 25 | Unlimited |
-| **Actions/month** | 10,000 | 100,000 | Unlimited |
-| **Audit retention** | 30 days | 1 year | Custom |
-| **Approval workflows** | Basic | Advanced | Custom |
-| **Policy rules** | 10 | 100 | Unlimited |
-| **API rate limit** | 60/min | 600/min | Unlimited |
-| **Users** | 3 | 20 | Unlimited |
-| | | | |
-| **Integrations** | | | |
-| Email notifications | :material-check: | :material-check: | :material-check: |
-| Slack | :material-close: | :material-check: | :material-check: |
-| Webhooks | :material-close: | :material-check: | :material-check: |
-| SIEM export | :material-close: | :material-close: | :material-check: |
-| | | | |
-| **Security** | | | |
-| Ed25519 signatures | :material-check: | :material-check: | :material-check: |
-| Hash-chained logs | :material-check: | :material-check: | :material-check: |
-| SSO/SAML | :material-close: | :material-close: | :material-check: |
-| IP allowlisting | :material-close: | :material-check: | :material-check: |
-| Dedicated tenant | :material-close: | :material-close: | :material-check: |
-| | | | |
-| **Support** | | | |
-| Community forum | :material-check: | :material-check: | :material-check: |
-| Email support | :material-close: | 24h response | 4h response |
-| Phone support | :material-close: | :material-close: | :material-check: |
-| Dedicated CSM | :material-close: | :material-close: | :material-check: |
-| SLA | - | 99.9% | 99.99% |
+## Pricing Philosophy
 
-## Usage-Based Pricing
+We believe in **transparent, value-based pricing**:
 
-### Actions
+1. **Open-source core** - No vendor lock-in, no hidden costs
+2. **Productized pilots** - Fixed-fee, fast time-to-value, no hourly billing
+3. **Enterprise support** - Recurring revenue for ongoing value, not upfront licenses
 
-An "action" is a single evaluate or execute request to the gateway.
+**Why this works:**
+- **For you:** Predictable costs, clear ROI, fast procurement
+- **For us:** Sustainable business model, aligned incentives, customer success
 
-| Volume | Price per 1,000 |
-|--------|-----------------|
-| First 10,000 | Included |
-| 10,001 - 100,000 | $1.00 |
-| 100,001 - 1,000,000 | $0.50 |
-| 1,000,000+ | $0.25 |
+---
 
-### Storage
+## Pilot vs. Blueprint vs. Support
 
-Audit log storage beyond plan limits:
+| | **Pilot** | **Blueprint** | **Support** |
+|---|:---:|:---:|:---:|
+| **Deliverable** | Working deployment | Design document | Ongoing service |
+| **Timeline** | 2-4 weeks | 1-2 weeks | Recurring |
+| **Outcome** | Production-ready | Implementation plan | Maintained deployment |
+| **Best for** | Fast deployment | Planning & buy-in | Long-term production |
+| **Price** | $15K-$25K | $5K-$10K | $3K-$10K/month |
 
-| Duration | Price per GB/month |
-|----------|-------------------|
-| Active (< 90 days) | $0.10 |
-| Archive (> 90 days) | $0.03 |
+---
 
 ## FAQ
 
-??? question "What counts as an action?"
-    Every call to `/gateway/execute` or `/gateway/evaluate` counts as one action. Approval decisions and log queries do not count.
+??? question "Is the open-source version feature-complete?"
+    Yes. The Apache-2.0 version includes all core features: policy enforcement, capability tokens, approvals, tamper-evident logs, operator UI, and the 47ers library. Commercial offerings provide expertise and support, not locked features.
 
-??? question "What happens if I exceed my limits?"
-    Free tier: Requests are rate-limited. Pro tier: Overage billed at usage rates. Enterprise: Custom arrangements.
+??? question "What's included in the pilot pricing?"
+    Fixed-fee pilot pricing includes everything listed in the "Agent Governance Pilot" section above. No hidden costs. Additional agents or workflows beyond the initial scope may require a change order.
 
-??? question "Can I downgrade my plan?"
-    Yes, you can downgrade at any time. Downgrade takes effect at the next billing cycle.
+??? question "Can we self-host after a pilot?"
+    Yes. Pilots deploy UAPK Gateway to **your** infrastructure. You own the deployment. After the pilot, you can self-manage (open-source) or transition to enterprise support.
 
-??? question "Is there a free trial for Pro?"
-    Yes, Pro includes a 14-day free trial with full features. No credit card required.
+??? question "What if the pilot doesn't meet objectives?"
+    We work closely to ensure success. If the pilot doesn't meet agreed objectives, there's no obligation to continue. Our goal is your success, not billable hours.
 
-??? question "What payment methods are accepted?"
-    Credit cards (Visa, Mastercard, Amex) and ACH for annual plans. Enterprise customers can pay by invoice.
+??? question "Do you offer hosted/SaaS deployment?"
+    Not currently. UAPK Gateway is designed for self-hosted deployment to ensure you own your data, evidence, and compliance posture. We can help with infrastructure setup as part of a pilot.
 
-??? question "Are there annual discounts?"
-    Yes, annual plans receive a 20% discount. Enterprise plans are typically annual.
+??? question "Can we start with open-source and upgrade later?"
+    Absolutely. Many customers start with self-hosted open-source to evaluate, then engage for a pilot when ready to deploy in production.
 
-## Self-Hosted Option
+??? question "What payment methods do you accept?"
+    Pilots: ACH, wire transfer, or credit card (invoiced). Support contracts: Monthly or annual invoicing. We can accommodate most procurement processes.
 
-For organizations that need to run UAPK Gateway in their own infrastructure:
+??? question "Do you offer discounts for multiple pilots?"
+    Yes. Contact us for volume pricing if you have multiple workflows or business units that need governance.
 
-| Option | Description | Pricing |
-|--------|-------------|---------|
-| Community Edition | Free, open-source | Free |
-| Enterprise License | Full features + support | Contact sales |
+---
 
-[View Deployment Guide](../deployment/index.md){ .md-button }
+## Self-Hosted Deployment
 
-## Contact Sales
+The open-source version can be deployed in minutes:
 
-For Enterprise pricing, custom requirements, or volume discounts:
+```bash
+# Clone and start
+git clone https://github.com/Amakua/uapk-core.git
+cd uapk-core
+make dev
 
-- Email: [sales@uapk.dev](mailto:sales@uapk.dev)
-- Schedule a call: [Book Demo](#)
+# Set up database
+make migrate
+make bootstrap
+
+# Open dashboard
+open http://localhost:8000
+```
+
+See the [Deployment Guide](../deployment/index.md) for production setup (Docker Compose, Caddy, backups, monitoring).
+
+---
+
+## Contact & Next Steps
+
+Ready to get started?
+
+1. **Self-Host:** Follow the [Quickstart Guide](../quickstart.md)
+2. **Pilot Program:** Read the [Pilot Overview](pilot.md) and contact us
+3. **Blueprint:** Email us your use case and team size
+4. **Enterprise Support:** Contact us for a support contract proposal
+
+**Email:** [mail@uapk.info](mailto:mail@uapk.info)
+
+**Response time:** 24 hours for commercial inquiries
+
+---
 
 ## Related
 
-- [Pilot Program](pilot.md) - Guided implementation
-- [Support](support.md) - Support options
-- [Quickstart](../quickstart.md) - Get started
+- [Pilot Program Details](pilot.md) - Full pilot SOW and deliverables
+- [Enterprise Overview](index.md) - Use cases and customer stories
+- [Support Options](support.md) - Support tiers and SLA details
+- [Quickstart Guide](../quickstart.md) - Get started with open-source

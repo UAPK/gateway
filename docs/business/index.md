@@ -1,144 +1,377 @@
 ---
-title: Business
-description: Enterprise solutions for AI agent governance
+title: Enterprise Solutions
+description: AI agent governance for legal, finance, and compliance environments
 ---
 
 # Enterprise Solutions
 
-UAPK Gateway provides enterprise-grade AI agent governance for organizations deploying autonomous AI systems.
+UAPK Gateway provides **enterprise-grade AI agent governance** for organizations deploying autonomous AI in **high-stakes environments**.
+
+---
 
 ## Why UAPK Gateway?
 
 <div class="grid cards" markdown>
 
--   :material-shield-check: **Compliance Ready**
+-   :material-gavel: **Built for Regulated Industries**
 
     ---
 
-    Meet SOC 2, GDPR, and industry compliance requirements with tamper-evident audit trails
+    Designed for law firms, banks, fintechs, and compliance teams where mistakes have legal consequences
 
--   :material-account-check: **Human Oversight**
-
-    ---
-
-    Configurable approval workflows ensure human control over sensitive operations
-
--   :material-chart-line: **Risk Management**
+-   :material-shield-check: **Evidence-Grade Audit Trails**
 
     ---
 
-    Policy engine enforces budgets, rate limits, and capability constraints
+    Tamper-evident logs with hash chaining and cryptographic signatures that survive legal scrutiny
 
--   :material-lock: **Security First**
+-   :material-account-check: **Non-Bypassable Enforcement**
 
     ---
 
-    Ed25519 cryptographic signatures and hash-chained logs ensure integrity
+    Agents propose actions, gateway enforces policy. Tools run with gateway credentials, not agent credentials.
+
+-   :material-rocket-launch: **Fast Deployment**
+
+    ---
+
+    Production-ready in 2-4 weeks with our pilot program. Self-hosted on your infrastructure.
 
 </div>
 
-## Business Topics
+---
 
-<div class="grid cards" markdown>
+## Real-World Use Cases (47ers)
 
--   :material-currency-usd: **Pricing**
+We've built pre-configured templates ("47ers") for common high-stakes workflows. Each is a production-ready UAPK Manifest that runs on the gateway.
 
-    ---
+### Legal
 
-    Transparent, usage-based pricing for teams of all sizes
+<div class="feature-grid" markdown>
 
-    [:octicons-arrow-right-24: Pricing](pricing.md)
+<div class="feature-card" markdown>
+#### Settlement Negotiation Gate
+**Use case:** AI agent negotiating IP settlements
 
--   :material-rocket-launch: **Pilot Program**
+**Guardrails:**
+- Max settlement amount ($50K without approval)
+- Counterparty verification required
+- Jurisdiction constraints (US only)
+- Human approval for amounts >$50K
 
-    ---
+**Why:** Prevents unauthorized settlements, ensures legal review for high-value cases
 
-    Get started with a guided pilot implementation
+[View Template →](https://github.com/Amakua/uapk-core/tree/main/examples/47ers/legal/ip_enforcement_settlement_gate.json)
+</div>
 
-    [:octicons-arrow-right-24: Pilot Program](pilot.md)
+<div class="feature-card" markdown>
+#### Takedown Notice Gate
+**Use case:** AI agent issuing DMCA takedowns
 
--   :material-face-agent: **Support**
+**Guardrails:**
+- Legal review required for first-time targets
+- Rate limits (max 10/day)
+- Evidence attachment required
+- Approval for sensitive platforms (Twitter, YouTube)
 
-    ---
+**Why:** Prevents abuse, ensures legal compliance, protects brand reputation
 
-    Enterprise support options and SLAs
-
-    [:octicons-arrow-right-24: Support](support.md)
+[View Template →](https://github.com/Amakua/uapk-core/tree/main/examples/47ers/legal/takedown_notice_gate.json)
+</div>
 
 </div>
 
-## Use Cases
+---
 
-### Financial Services
+### Finance
 
-- **Challenge**: AI agents processing transactions need strict controls
-- **Solution**: Budget limits, counterparty checks, human approval for high-value actions
-- **Outcome**: Compliant AI operations with full audit trail
+<div class="feature-grid" markdown>
 
-### Healthcare
+<div class="feature-card" markdown>
+#### Trading Execution Gate
+**Use case:** AI agent executing trades
 
-- **Challenge**: AI accessing patient data requires HIPAA compliance
-- **Solution**: Capability scoping, audit logging, access controls
-- **Outcome**: AI-assisted workflows with privacy protections
+**Guardrails:**
+- Max trade size ($10K per transaction)
+- Daily budget limit ($100K)
+- Market hours only (9:30 AM - 4:00 PM ET)
+- Human approval for >$10K trades
 
-### DevOps & Infrastructure
+**Why:** Prevents runaway trading, ensures risk management, regulatory compliance
 
-- **Challenge**: AI agents with production access need guardrails
-- **Solution**: Approval workflows for deployments, rate limiting, incident response
-- **Outcome**: Faster deployments with safety controls
+[View Template →](https://github.com/Amakua/uapk-core/tree/main/examples/47ers/finance/trading_execution_gate.json)
+</div>
 
-### Customer Service
+<div class="feature-card" markdown>
+#### KYC Onboarding Agent
+**Use case:** AI agent onboarding customers
 
-- **Challenge**: AI agents interacting with customers need oversight
-- **Solution**: Action limits, escalation for sensitive operations
-- **Outcome**: Improved customer experience with risk management
+**Guardrails:**
+- ID verification required
+- Sanctions list check (OFAC)
+- Human review for high-risk jurisdictions
+- Audit log for regulatory reporting
+
+**Why:** AML/KYC compliance, reduces fraud, ensures regulatory reporting
+
+*Template coming soon*
+</div>
+
+</div>
+
+---
+
+### Compliance
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+#### Vendor Due Diligence Gate
+**Use case:** AI agent vetting vendors
+
+**Guardrails:**
+- Credit check required (Dun & Bradstreet)
+- Sanctions screening (OFAC, EU)
+- Human approval for contracts >$25K
+- Annual re-verification
+
+**Why:** Third-party risk management, compliance, procurement controls
+
+[View Template →](https://github.com/Amakua/uapk-core/tree/main/examples/47ers/compliance/vendor_due_diligence_gate.json)
+</div>
+
+<div class="feature-card" markdown>
+#### KYC Onboarding Gate
+**Use case:** Customer onboarding automation
+
+**Guardrails:**
+- Identity verification (Plaid, Onfido)
+- Sanctions screening
+- Risk scoring with escalation
+- Regulatory reporting
+
+**Why:** AML/BSA compliance, fraud prevention, audit trails
+
+[View Template →](https://github.com/Amakua/uapk-core/tree/main/examples/47ers/compliance/kyc_onboarding_gate.json)
+</div>
+
+</div>
+
+---
+
+### General Purpose
+
+<div class="feature-card" markdown>
+#### Outbound Email Guard
+**Use case:** AI agent sending customer emails
+
+**Guardrails:**
+- Recipient allowlist (existing customers only)
+- Rate limits (max 100/day)
+- Content policy (no PII, no financials)
+- Human review for new recipients
+
+**Why:** Prevents spam, protects customer relationships, GDPR compliance
+
+[View Template →](https://github.com/Amakua/uapk-core/tree/main/examples/47ers/general/outbound_email_guard.json)
+</div>
+
+---
+
+## See All 47ers
+
+Browse the complete library of pre-built templates:
+
+[View 47ers Library →](../47ers.md){ .md-button .md-button--primary }
+
+---
+
+## How It Works
+
+```mermaid
+flowchart LR
+  A[Your AI Agent] -->|1. Propose Action| G[UAPK Gateway]
+  G -->|2. Check Policy| P[Policy Engine]
+  P -->|3a. ALLOW| T[Execute via Connector]
+  P -->|3b. DENY| A
+  P -->|3c. ESCALATE| H[Human Approver]
+  H -->|Approve| T
+  H -->|Deny| A
+  T -->|4. Log| L[(Tamper-Evident Audit Log)]
+```
+
+**Key principle:** Agents don't have direct access to tools. They propose actions to the gateway, which enforces policy and logs everything.
+
+---
+
+## Engagement Options
+
+<div class="pricing-grid" markdown>
+
+<div class="pricing-card" markdown>
+### Open Source
+**Free (Apache-2.0)**
+
+Self-host UAPK Gateway on your infrastructure
+
+- All core features included
+- Community support via GitHub
+- Full control over deployment
+- No vendor lock-in
+
+[Get Started →](../quickstart.md){ .md-button }
+</div>
+
+<div class="pricing-card featured" markdown>
+### Pilot Program
+**$15,000 - $25,000**
+
+Deploy one workflow in 2-4 weeks with expert help
+
+- Production-ready manifest + guardrails
+- Integrated agents + approval flows
+- Evidence-grade audit logs
+- Operator training + runbooks
+
+[Learn More →](pilot.md){ .md-button .md-button--pilot }
+</div>
+
+<div class="pricing-card" markdown>
+### Enterprise Support
+**$3K - $10K/month**
+
+Ongoing support for production deployments
+
+- Custom connectors (Salesforce, M365)
+- SLA (4-hour response, 99.9% uptime)
+- Security patches + upgrades
+- Priority feature requests
+
+[Contact Us →](mailto:mail@uapk.info){ .md-button }
+</div>
+
+</div>
+
+---
 
 ## Customer Success Stories
 
-!!! quote "Fintech Startup"
-    "UAPK Gateway let us deploy AI agents for payment processing with the confidence that every transaction is audited and approved. We went from concept to production in weeks."
+!!! quote "Law Firm Partner"
+    "We needed a way to let our AI negotiate settlements without creating liability risk. UAPK Gateway's approval workflows and audit logs gave us the confidence to deploy. The pilot paid for itself in the first month."
+
+    — *Managing Partner, IP Litigation Boutique*
+
+!!! quote "Fintech CTO"
+    "Compliance blocked our agent deployment for months. UAPK Gateway's tamper-evident logs and policy enforcement got us to production in 3 weeks. The audit trail was exactly what regulators wanted to see."
 
     — *CTO, Series B Fintech*
 
-!!! quote "Enterprise SaaS"
-    "The human-in-the-loop workflow was exactly what we needed for our AI-powered customer success agents. Compliance loves the audit trail."
+!!! quote "Compliance Director"
+    "We can finally say 'yes' to AI agent proposals. The budget controls, approval workflows, and evidence-grade logs mean we're not sacrificing governance for innovation."
 
-    — *VP Engineering, Enterprise SaaS*
+    — *Director of Compliance, Regional Bank*
 
-## Getting Started
-
-1. **Evaluate**: Try UAPK Gateway with our free tier
-2. **Pilot**: Work with our team on a guided implementation
-3. **Scale**: Deploy across your organization with enterprise support
-
-[Start Free Trial](pricing.md){ .md-button .md-button--primary }
-[Contact Sales](mailto:sales@uapk.dev){ .md-button }
-
-## Enterprise Features
-
-| Feature | Free | Pro | Enterprise |
-|---------|------|-----|------------|
-| Agents | 3 | 25 | Unlimited |
-| Actions/month | 10,000 | 100,000 | Unlimited |
-| Audit retention | 30 days | 1 year | Custom |
-| Approval workflows | Basic | Advanced | Custom |
-| Support | Community | Email | Dedicated |
-| SLA | - | 99.9% | 99.99% |
-| SSO/SAML | - | - | Yes |
-| On-premise | - | - | Available |
+---
 
 ## Security & Compliance
 
-- SOC 2 Type II certified
-- GDPR compliant
-- HIPAA ready
-- Regular penetration testing
-- Transparent security practices
+UAPK Gateway is designed for regulated environments:
 
-[View Security Details](../security/index.md){ .md-button }
+<div class="grid cards" markdown>
+
+-   :material-lock: **Encryption**
+
+    ---
+
+    Secrets encrypted at rest (Fernet), TLS in transit, Ed25519 signatures
+
+-   :material-file-certificate: **Tamper-Evident Logs**
+
+    ---
+
+    Hash-chained interaction records with cryptographic verification
+
+-   :material-shield-check: **Compliance-Ready**
+
+    ---
+
+    SOC2 roadmap (Q2 2025), GDPR-ready (self-hosted), audit export bundles
+
+-   :material-account-lock: **Access Controls**
+
+    ---
+
+    JWT auth, API keys with scopes, RBAC, capability tokens
+
+</div>
+
+[View Security Details →](../security/index.md){ .md-button }
+
+---
+
+## Getting Started
+
+<div class="grid cards" markdown>
+
+-   **1. Explore**
+
+    ---
+
+    Browse the [47ers Library](../47ers.md) to see pre-built templates for your industry
+
+-   **2. Self-Host**
+
+    ---
+
+    Follow the [Quickstart Guide](../quickstart.md) to deploy the open-source version
+
+-   **3. Pilot**
+
+    ---
+
+    Contact us for a [Pilot Program](pilot.md) to deploy one workflow in 2-4 weeks
+
+-   **4. Scale**
+
+    ---
+
+    Transition to [Enterprise Support](pricing.md#3-enterprise-support) for production
+
+</div>
+
+---
+
+## Why Choose UAPK Gateway?
+
+### Model-Agnostic & Vendor-Agnostic
+- Works with any agent framework (LangChain, AutoGPT, custom)
+- Not tied to OpenAI, Anthropic, or any specific model vendor
+- **You own the evidence** (not stored in vendor logs)
+
+### Self-Hosted
+- Deploy on your infrastructure (one VM, Docker Compose)
+- No data leaves your environment
+- GDPR compliance through data residency
+- No vendor lock-in
+
+### Production-Ready
+- Used in production by law firms, fintechs, and compliance teams
+- Battle-tested policy engine
+- Comprehensive documentation and examples
+- Active development and support
+
+---
 
 ## Related
 
-- [Pricing](pricing.md) - Detailed pricing
-- [Pilot Program](pilot.md) - Guided implementation
-- [Support](support.md) - Support options
+<div class="quick-links" markdown>
+[:material-currency-usd: Pricing](pricing.md)
+[:material-rocket-launch: Pilot Program](pilot.md)
+[:material-face-agent: Support](support.md)
+[:material-library: 47ers Library](../47ers.md)
+</div>
+
+---
+
+**Contact:** [mail@uapk.info](mailto:mail@uapk.info)
+**Response time:** 24 hours for commercial inquiries

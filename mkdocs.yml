@@ -1,10 +1,10 @@
 site_name: UAPK Gateway
 site_description: Universal Agent Protocol Kit Gateway - Policy enforcement and audit logging for AI agents
 site_author: UAPK Team
-site_url: https://uapk.dev
+site_url: https://uapk.info
 
-repo_name: uapk/gateway
-repo_url: https://github.com/uapk/gateway
+repo_name: Amakua/uapk-core
+repo_url: https://github.com/Amakua/uapk-core
 
 theme:
   name: material
@@ -123,6 +123,7 @@ nav:
       - Policy Decisions: concepts/decisions.md
       - Approval Workflow: concepts/approvals.md
       - Audit Logs: concepts/logs.md
+      - Future-Proof Architecture: concepts/future-proof.md
   - API Reference:
       - api/index.md
       - Authentication: api/authentication.md
@@ -139,6 +140,7 @@ nav:
       - Incident Response: operator/incidents.md
   - Security:
       - security/index.md
+      - Security Policy: security/policy.md
       - Threat Model: security/threat-model.md
       - Data Handling: security/data-handling.md
       - Key Management: security/key-management.md
@@ -148,10 +150,11 @@ nav:
       - Caddy Configuration: deployment/caddy.md
       - Backups & Recovery: deployment/backups.md
       - Monitoring: deployment/monitoring.md
-  - Business:
-      - business/index.md
-      - Pricing: business/pricing.md
+  - Enterprise:
+      - Overview: business/index.md
+      - Pitch: business/pitch.md
       - Pilot Program: business/pilot.md
+      - Pricing: business/pricing.md
       - Support: business/support.md
   - 47ers Library: 47ers.md
   - Roadmap: roadmap.md
@@ -166,11 +169,11 @@ extra:
     property: G-XXXXXXXXXX
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/uapk/gateway
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/uapkdev
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/uapk
+      link: https://github.com/Amakua/uapk-core
+      name: GitHub Repository
+    - icon: fontawesome/solid/envelope
+      link: mailto:mail@uapk.info
+      name: Contact Us
   generator: false
 
 extra_css:

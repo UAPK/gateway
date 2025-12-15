@@ -7,6 +7,9 @@ description: Get UAPK Gateway running in 5 minutes
 
 Get UAPK Gateway running locally in 5 minutes using Docker Compose.
 
+!!! info "Commercial Option Available"
+    Want expert help? Our [Agent Governance Pilot](business/pilot.md) delivers a production-ready deployment in 2-4 weeks ($15,000 - $25,000).
+
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) 20.10+
