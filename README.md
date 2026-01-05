@@ -446,6 +446,6 @@ Apache-2.0 — see `LICENSE`.
 ## Support
 
 - **Documentation**: See `docs/` or http://localhost:8000/docs when running
-- **Issues**: https://github.com/Amakua/uapk-core/issues
+- **Issues**: https://github.com/UAPK/core/issues
 - **Commercial inquiries**: Label issues with `commercial`
 - **Security reports**: See `SECURITY.md`

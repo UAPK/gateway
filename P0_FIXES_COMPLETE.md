@@ -372,7 +372,7 @@ Updated files:
 ## Support & Escalation
 
 For issues or questions:
-- **GitHub Issues:** https://github.com/Amakua/uapk-gateway/issues
+- **GitHub Issues:** https://github.com/UAPK/gateway/issues
 - **Security Reports:** See `SECURITY.md`
 - **Commercial Support:** Label issues with `commercial`
 

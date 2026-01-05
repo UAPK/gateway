@@ -211,11 +211,11 @@ Pilots start fast. Most customers go live in 2-4 weeks.
 ## Contact
 
 **Commercial inquiries:**
-- GitHub: Open an issue labeled `commercial` at https://github.com/Amakua/uapk-core/issues
+- GitHub: Open an issue labeled `commercial` at https://github.com/UAPK/core/issues
 - Email: See `SECURITY.md` for contact details
 
 **Open source:**
-- Repo: https://github.com/Amakua/uapk-core
+- Repo: https://github.com/UAPK/core
 - Docs: See `docs/` directory
 - License: Apache-2.0 (self-hostable, no strings attached)
 

@@ -22,7 +22,7 @@ We take security seriously. If you discover a security vulnerability, please rep
 Instead, please report security issues via:
 
 1. **GitHub Security Advisories** (preferred)
-   - Navigate to: https://github.com/Amakua/uapk-core/security/advisories
+   - Navigate to: https://github.com/UAPK/core/security/advisories
    - Click "Report a vulnerability"
    - Provide details of the vulnerability
 
@@ -207,15 +207,15 @@ For customers with support contracts:
 - Dedicated security contact
 
 ### Open Source Community
-- GitHub Security Advisories: https://github.com/Amakua/uapk-core/security/advisories
-- Discussions: https://github.com/Amakua/uapk-core/discussions
+- GitHub Security Advisories: https://github.com/UAPK/core/security/advisories
+- Discussions: https://github.com/UAPK/core/discussions
 
 ---
 
 ## Security Advisories
 
 Published security advisories will be listed here:
-- [GitHub Security Advisories](https://github.com/Amakua/uapk-core/security/advisories)
+- [GitHub Security Advisories](https://github.com/UAPK/core/security/advisories)
 
 **Subscribe:** Watch this repository and enable "Security alerts" notifications.
 

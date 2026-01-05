@@ -93,7 +93,7 @@ The website has been transformed from a SaaS-focused model to a pilot-first appr
 
 ## GitHub Repository
 
-https://github.com/Amakua/uapk-core
+https://github.com/UAPK/core
 
 ## Contact
 
